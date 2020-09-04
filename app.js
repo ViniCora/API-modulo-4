@@ -30,7 +30,7 @@ app.use(bodyParser.json());
 app.use(bodyParser.urlencoded({ extended: true }));
 app.use(
   cors({
-    origin: 'http://localhost:8080',
+    origin: 'https://igti-modulo4-api.herokuapp.com/',
   })
 );
 
@@ -40,4 +40,4 @@ app.get('/', (req, res) => {
   res.send('API em execucao');
 });
 
-app.listen(process.env.PORT || 8081, () => {});
+app.listen(8080 || 8081, () => {});
